@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 closeGame = false
-//sum2 = 1;
-//sum3 = 1;
+ArrayOwnersDuplicate = []
+
+if global.player_mode == 0 then 
+	alarm[0] = 30
+	
+if global.player_mode != -1 then	
+	alarm[1] = 70
+
