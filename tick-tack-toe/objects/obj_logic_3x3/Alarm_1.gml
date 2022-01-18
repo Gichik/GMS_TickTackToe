@@ -11,7 +11,7 @@ if global.turn == -1 && !closeGame {
 		enemyStep = global.ArrayGameField[1][1]
 	}
 	else{
-		var result = MinMaxSteps(ArrayOwnersDuplicate, global.playerO, global.stepCount+1, global.lastStep)
+		var result = MinMaxSteps(ArrayOwnersDuplicate, global.playerO, global.stepCount, global.lastStep)
 		enemyStep =  result[0]	
 	}
 

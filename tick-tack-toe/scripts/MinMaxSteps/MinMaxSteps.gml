@@ -35,7 +35,7 @@ function MinMaxSteps(GameField, candidate, stepsCount, step){
 	
 
 	for (var i = 0; i< array_length(ArrayWays); i += 1){
-		ArrayWays[i] = MinMaxSteps(GameField, -1*candidate, stepsCount+1,  ArrayWays[i][0])
+		ArrayWays[i] = MinMaxSteps(GameField, -1*candidate, stepsCount,  ArrayWays[i][0])
 	}
 	
 	var bestWay = 0
@@ -43,7 +43,7 @@ function MinMaxSteps(GameField, candidate, stepsCount, step){
 	if candidate > 0 then{
 		var bestScore = 100000
 		for (var i = 0; i < array_length(ArrayWays); i += 1){
-			if ArrayWays[i][1] < bestScore then{
+			if ArrayWays[i][1] < bestScore && ArrayWays[i][1] > 0 then{
 				bestScore = ArrayWays[i][1]
 				bestWay = i
 			}
@@ -54,7 +54,7 @@ function MinMaxSteps(GameField, candidate, stepsCount, step){
 	if candidate < 0 then{
 		var bestScore = -100000
 		for (var i = 0; i < array_length(ArrayWays); i += 1){
-			if ArrayWays[i][1] > bestScore then{
+			if ArrayWays[i][1] > bestScore && ArrayWays[i][1] < 0 then{
 				bestScore = ArrayWays[i][1]
 				bestWay = i
 			}

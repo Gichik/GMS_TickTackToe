@@ -10,7 +10,7 @@ if global.turn == 1 && !closeGame then{
 		Step = global.lastStep
 	}
 	else{
-		var result = MinMaxSteps(ArrayOwnersDuplicate, global.playerX, global.stepCount+1, global.lastStep)
+		var result = MinMaxSteps(ArrayOwnersDuplicate, global.playerX, global.stepCount, global.lastStep)
 		Step =  result[0]	
 	}
 
